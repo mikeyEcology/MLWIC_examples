@@ -15,8 +15,7 @@ classify(path_prefix = "/Users/mikeytabak/Desktop/test_images", # this is the ab
          )
 ```         
 
-The classification predictions would then be stored at `/Users/mikeytabak/Desktop/L1/model_predictions.txt`. 
-But it is not the most friendly format. If you want your output in a nice csv, you can the `make_output` function. 
+The classification predictions would then be stored at `/Users/mikeytabak/Desktop/L1/model_predictions.txt`, but it is not the most user-friendly format. The `make_output` function produces a csv for easier use. 
 
 ```
 make_output(output_location = "/Users/mikeytabak/Desktop", # the output csv will be stored on my dekstop
@@ -25,5 +24,5 @@ make_output(output_location = "/Users/mikeytabak/Desktop", # the output csv will
             saved_predictions = "model_predictions.txt" # the same name that I used for save_predictions in the classify function (if I didn't use default).
             )
 ```           
-Based on this code, my nice csv output will be stored at "/Users/mikeytabak/Desktop/example_results.csv". When you look at this output csv, each row is a different image. The answer column contains the species ID that was provided to the model for the image ([species ID lookup table](https://github.com/mikeyEcology/MLWIC/blob/master/speciesID.csv)). guess1 is the top guess (what the model thinks is in the image). If `guess1 == answer`, the model was correct for that image. If this is not the case, the fileName column contains the exact path to the image, so you can inspect the image manually. guess2 is the next best guess, and so on. confidence1 is the model's confidence in guess1, confidence2 is the model's confidence in guess2, ... [Tabak et al](https://www.biorxiv.org/content/early/2018/06/14/346809) discuss the top guess vs. the top 5 guesses and how these can be used. \
+Based on this code, my csv output will be stored at "/Users/mikeytabak/Desktop/example_results.csv". When you look at this output csv, each row is a different image. The answer column contains the species ID that was provided to the model for the image ([species ID lookup table](https://github.com/mikeyEcology/MLWIC/blob/master/speciesID.csv)). guess1 is the top guess (what the model thinks is in the image). If `guess1 == answer`, the model was correct for that image. If this is not the case, the fileName column contains the exact path to the image, so you can inspect the image manually. guess2 is the next best guess, and so on. confidence1 is the model's confidence in guess1, confidence2 is the model's confidence in guess2, ... [Tabak et al](https://www.biorxiv.org/content/early/2018/06/14/346809) discuss the top guess vs. the top 5 guesses and how these can be used. \
 The species ID in the `data_info` file will not affect how the model assigns images to species. If you don't believe me, try changing all of the values in this column to 0 (or any other number between 0-27) and run the model again (but remember that if you modify and save this file to save it with Unix linebreaks). 
