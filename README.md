@@ -37,7 +37,7 @@ train(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute p
          log_dir_train = "training_output" # this will be a folder that contains the trained model (call it whatever you want). You will specify this folder as the "log_dir" when you classify images using this trained model. For example, the log_dir for the model included in this package is called "USDA182"
          )
 ```
-As mentioned above, you would not want to use this model for anything because it has only been trained on 2,000 images, but hopefully this illustrates the method. What you specified as your `log_dir_train` is what you will specify as your `log_dir` when using `classify`. As this training is only for illustration, once the output in your R console starts to look like this:
+As mentioned above, you would not want to use this model for anything because it has only been trained on 2,000 images, but hopefully this illustrates the method. What you specified as your `log_dir_train` is what you will specify as your `log_dir` when using `classify`. As this example training is only for illustration, once the output in your R console starts to look like this:
 ```
 Filling queue with 2000 images before starting to train. This may take some times.
 2018-06-28 19:46:25.235301: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
