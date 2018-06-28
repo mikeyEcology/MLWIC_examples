@@ -7,7 +7,7 @@ Then download the example csv and folder of images from this repository ("image_
 
 <b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. If you don't know how to get your path, you can find some information in [this video](https://www.youtube.com/watch?v=kIhGavBqXYc) or [this blog](https://www.cnet.com/how-to/how-to-copy-a-file-path-in-os-x/).
 ```
-classify(path_prefix = "/Users/mikeytabak/Desktop/test_images", # this is the absolute path to the images. 
+classify(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute path to the images. 
          data_info = "/Users/mikeytabak/Desktop/image_labels.csv", # this is the location of the csv containing image information. It has Unix linebreaks and no headers.
          model_dir = "/Users/mikeytabak/Desktop", # assuming this is where you stored the L1 folder in Step 3 of the instructions: github.com/mikeyEcology/MLWIC/blob/master/README
          python_loc = "/anaconda2/bin/", # the location of Python 2.7 on your computer. 
@@ -29,7 +29,7 @@ The species ID in the `data_info` file will not affect how the model assigns ima
 
 <b>Example of training a machine learning model that classifies images.</b> I this exammple, I'll use the same images and data to train a model. There are fewer than 2,000 total images, so the model would perform very poorly, but I am presenting thoe code for illustration. If you are running on a CPU, this will take at least 30 minutes to run. 
 ```
-train(path_prefix = "/Users/mikeytabak/Desktop/test_images", # this is the absolute path to the images. 
+train(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute path to the images. 
          data_info = "/Users/mikeytabak/Desktop/image_labels.csv", # this is the location of the csv containing image information. It has Unix linebreaks and no headers.
          model_dir = "/Users/mikeytabak/Desktop", # assuming this is where you stored the L1 folder in Step 3 of the instructions: github.com/mikeyEcology/MLWIC/blob/master/README
          python_loc = "/anaconda2/bin/", # the location of Python 2.7 on your computer. 
