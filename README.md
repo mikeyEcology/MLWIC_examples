@@ -3,9 +3,9 @@
 <b> First follow steps [here](https://github.com/mikeyEcology/MLWIC/blob/master/README.md) to get your computer ready to run `MLWIC`. </b>\
 For more details on the methods, you can see [our paper](https://www.biorxiv.org/content/early/2018/06/14/346809), but I'm assuming that you are already familiar with this and that you have already installed and setup `MLWIC`. 
 
-Then download the example csv and folder of images from this repository ("image_labels.csv" and "test_images") to your computer and note the location. In this example, I have downloaded to my desktop.
+Then download the example csv and folder of images from this repository ("image_labels.csv" and "images") to your computer and note the location. In this example, I have downloaded to my desktop. If you put the csv, the images folder, and the L1 folder in the same folder, you can avoid specifying paths. You just need to set your working directory to this folder before running functions and leave the path_prefix, data_info, and model_dir empty. In the examples below, I specify paths because this is a more efficient way to store data (the function will find files and folders anywhere on your computer if you specify their paths). 
 
-<b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. If you don't know how to get your path, you can find some information in [this video](https://www.youtube.com/watch?v=kIhGavBqXYc) or [this blog](https://www.cnet.com/how-to/how-to-copy-a-file-path-in-os-x/).
+<b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. 
 ```
 classify(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute path to the images. 
          data_info = "/Users/mikeytabak/Desktop/image_labels.csv", # this is the location of the csv containing image information. It has Unix linebreaks and no headers.
