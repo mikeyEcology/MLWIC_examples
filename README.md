@@ -37,4 +37,16 @@ train(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute p
          log_dir_train = "training_output" # this will be a folder that contains the trained model (call it whatever you want). You will specify this folder as the "log_dir" when you classify images using this trained model. For example, the log_dir for the model included in this package is called "USDA182"
          )
 ```
-As mentioned above, you would not want to use this model for anything because it has only been trained on 2,000 images, but hopefully this illustrates the method. What you specified as your `log_dir_train` is what you will specify as your `log_dir` when using `classify`. 
+As mentioned above, you would not want to use this model for anything because it has only been trained on 2,000 images, but hopefully this illustrates the method. What you specified as your `log_dir_train` is what you will specify as your `log_dir` when using `classify`. As this training is only for illustration, once the output in your R console starts to look like this:
+```
+Filling queue with 2000 images before starting to train. This may take some times.
+2018-06-28 19:46:25.235301: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-06-28 19:39:17.631641: epoch 55, step 0, loss = 2.74, Top-1 = 0.50 Top-5 = 0.83 (8.6 examples/sec; 1.394 sec/batch)
+2018-06-28 19:39:37.900512: epoch 55, step 10, loss = 0.95, Top-1 = 0.75 Top-5 = 0.92 (65.7 examples/sec; 0.183 sec/batch)
+2018-06-28 19:39:53.390196: epoch 56, step 0, loss = 5.56, Top-1 = 0.17 Top-5 = 0.75 (65.3 examples/sec; 0.184 sec/batch)
+2018-06-28 19:40:11.718238: epoch 56, step 10, loss = 0.07, Top-1 = 1.00 Top-5 = 1.00 (65.4 examples/sec; 0.183 sec/batch)
+2018-06-28 19:40:26.435674: epoch 57, step 0, loss = 0.05, Top-1 = 1.00 Top-5 = 1.00 (65.9 examples/sec; 0.182 sec/batch)
+2018-06-28 19:40:44.369809: epoch 57, step 10, loss = 1.46, Top-1 = 0.67 Top-5 = 1.00 (68.0 examples/sec; 0.177 sec/batch)
+2018-06-28 19:40:59.095571: epoch 58, step 0, loss = 0.70, Top-1 = 0.83 Top-5 = 1.00 (67.4 examples/sec; 0.178 sec/batch)
+```
+This confirms that you are successfully training a model. You can stop training with the example dataset and train a model using real data. 
