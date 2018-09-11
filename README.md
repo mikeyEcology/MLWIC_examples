@@ -1,11 +1,11 @@
 # MLWIC_examples: Using the [MLWIC](https://github.com/mikeyEcology/MLWIC) (Machine Learning for Wildlife Image Classification) R Package
 
 <b> First follow steps [here](https://github.com/mikeyEcology/MLWIC/blob/master/README.md) to get your computer ready to run `MLWIC`. </b>\
-For more details on the methods, you can see [our paper](https://www.biorxiv.org/content/early/2018/06/14/346809), but I'm assuming that you are already familiar with this and that you have already installed and setup `MLWIC`. 
+For more details on the methods, you can see [our paper](https://www.biorxiv.org/content/early/2018/06/14/346809), but I'm assuming that you are already somewhat familiar with this and that you have already installed and setup `MLWIC`. 
 
 Then download the example csv and folder of images from this repository ("image_labels.csv" and "images") to your computer and note the location. In this example, I have downloaded to my desktop. If you put the csv, the images folder, and the L1 folder in the same folder, you can avoid specifying paths. You just need to set your working directory to this folder before running functions and leave the path_prefix, data_info, and model_dir empty. In the examples below, I specify paths because this is a more efficient way to store data (the function will find files and folders anywhere on your computer if you specify their paths). 
 
-<b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. 
+<b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. Also note that if you are using windows your path would look something like `C:/Users/apmatabak/Desktop/...`.
 ```
 classify(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute path to the images. 
          data_info = "/Users/mikeytabak/Desktop/image_labels.csv", # this is the location of the csv containing image information. It has Unix linebreaks and no headers.
@@ -49,4 +49,4 @@ Filling queue with 2000 images before starting to train. This may take some time
 2018-06-28 19:40:44.369809: epoch 57, step 10, loss = 1.46, Top-1 = 0.67 Top-5 = 1.00 (68.0 examples/sec; 0.177 sec/batch)
 2018-06-28 19:40:59.095571: epoch 58, step 0, loss = 0.70, Top-1 = 0.83 Top-5 = 1.00 (67.4 examples/sec; 0.178 sec/batch)
 ```
-This confirms that you are successfully training a model. You can stop training with the example dataset and train a model using real data. 
+This confirms that you are successfully training a model. You can stop training with the example dataset and train a model using your images.
