@@ -5,6 +5,9 @@ For more details on the methods, you can see [our paper](https://www.biorxiv.org
 
 Then download the example csv and folder of images from this repository ("image_labels.csv" and "images") to your computer and note the location. In this example, I have downloaded to my desktop. If you put the csv, the images folder, and the L1 folder in the same folder, you can avoid specifying paths. You just need to set your working directory to this folder before running functions and leave the path_prefix, data_info, and model_dir empty. In the examples below, I specify paths because this is a more efficient way to store data (the function will find files and folders anywhere on your computer if you specify their paths). 
 
+(Important note)
+The images provided for this example have all been resized to 256x256 pixels. Anytime you're using the current trained model you should first resize your images to this resolution. The model was trained on images at this resolution for practical reasons and so it should classify images with the same size inputs.
+
 <b>Use the model to classify the images in the folder using `classify`.</b> Here, I show code using the paths that are on my computer. Unless your username on your computer is mikeytabak, you will have a different path. Also note that if you are using windows your path would look something like `C:/Users/apmatabak/Desktop/...`.
 ```
 classify(path_prefix = "/Users/mikeytabak/Desktop/images", # this is the absolute path to the images. 
