@@ -87,21 +87,19 @@ setup(python_loc = "C:/Users/UserName/AppData/Local/Continuum/anaconda3/")
 
 - After running the `setup` function, your console will be updated with messages about installed packages and any errors the program encountered. **Some errors are acceptable**; for example, the following errors will likely not hinder your ability to run the `classify` or `train` commands:
 
-<p style="color:black; font-size:0.9em; margin-right:10%; margin-left:10%; font-family:courier">
-...Many messages about packages installing...
-</p>
-<p style="color:red; font-size:0.9em; margin-right:10%; margin-left:10%; font-family:courier">
-Solving environment: ...working... failed<br>
-UnsatisfiableError: The following specifications were found to be in conflict:<br>
-  - argparse<br>
-  - tensorflow<br>
-</p>
-<p style="color:black; font-size:0.9em; margin-right:10%; margin-left:10%; font-family:courier">
-Use "conda search <package> --info" to see the dependencies for each package.<br>
-</p>
-<p style="color:red; font-size:0.9em; margin-right:10%; margin-left:10%; font-family:courier">
-Error: Error 1 occurred installing packages into conda environment r-reticulate<br>
-</p>
+```{r}
+# ...Many messages about packages installing...
+# 
+# Solving environment: ...working... failed
+# UnsatisfiableError: The following specifications were found to be in conflict:
+#   - argparse
+#   - tensorflow
+# 
+# Use "conda search <package> --info" to see the dependencies for each package.
+# 
+# Error: Error 1 occurred installing packages into conda environment r-reticulate
+```
+
 
 
 #### Run the classify command. 
