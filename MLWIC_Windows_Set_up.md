@@ -26,7 +26,7 @@ Feb 22, 2019
 -   Install Anaconda for "just me". You should note the location of the install, e.g., `C:/Users/UserName/AppData/Local/Continuum/Anaconda3`. You will need to know this path when you use the `MLWIC` package in R, so record it somewhere.
 -   Use the recommended settings for the rest of the installation; there is no need to install Microsoft VSCode.
 
-### Install Tensorflow using Anaconda Navigator.
+### Install Tensorflow (version 1.14 or earlier) using Anaconda Navigator.
 
 -   In your "Start" menu on the bottom left-hand side of your taskbar, scroll through the list of installed programs on your computer (or, alternatively, use the search bar in your task bar) and select "Anaconda Navigator" to open the program.
 -   Click "Environments" tab on the left hand side of the window.
