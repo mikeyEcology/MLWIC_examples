@@ -1,4 +1,6 @@
-# MLWIC_examples: Using the [MLWIC](https://github.com/mikeyEcology/MLWIC) (Machine Learning for Wildlife Image Classification) R Package
+# MLWIC_examples: Using the [MLWIC](https://github.com/mikeyEcology/MLWIC) or [MLWIC2](https://github.com/mikeyEcology/MLWIC2) (Machine Learning for Wildlife Image Classification) R Package
+
+## <b> If you are using [MLWIC2](https://github.com/mikeyEcology/MLWIC2), simply download (or clone) this repository to your local machine and follow the instructions in the [readme](https://github.com/mikeyEcology/MLWIC2/blob/master/README.md). If you are using [MLWIC](https://github.com/mikeyEcology/MLWIC), more details are provided below</b>
 
 <b> First follow steps [here](https://github.com/mikeyEcology/MLWIC/blob/master/README.md) to get your computer ready to run `MLWIC`. </b>\
 For more details on the methods, you can see [our paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13120), but I'm assuming that you are already somewhat familiar with this and that you have already installed and setup `MLWIC`. 
